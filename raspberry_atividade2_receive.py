@@ -1,12 +1,13 @@
 import serial
-import time
 
 port = "/dev/ttyS0"    # Raspberry Pi 3
 
-serial = serial.Serial(port, baudrate = 9600, timeout=3)
+serial = serial.Serial(port, baudrate = 9600, timeout=1)
 print "starting"
 text = ""
-while (text != "exit\n"): 
-    text = serial.readline() 
+while (text != "exit"): 
+    text = serial.readline()
+    #text = text[:-1] 
+    text = text.replace("\r\n", "")		    
     if (text != ""):
-       print ("Android: " + text + "\n")
+       print ("Droid: " + text)
