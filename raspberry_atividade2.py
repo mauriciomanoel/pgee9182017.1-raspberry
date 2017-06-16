@@ -1,16 +1,18 @@
-import serial
+import RPi.GPIO as GPIO
 import time
+led_pin = 4
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(led_pin, GPIO.OUT)
+try:
+	while 1:
+		print("led ligado")
+		GPIO.output(led_pin, True)
+		time.sleep(1)
+		print("led desligado")
+		GPIO.output(led_pin, False)
+		time.sleep(1)
+except KeyboardInterrupt:
+	GPIO.cleanup()
+print("fim")	
+		
 
-port = "/dev/ttyS0"    # Raspberry Pi 3
-
-serial = serial.Serial(port, baudrate = 9600, timeout=3)
-print "starting"
-text = ""
-while (text != "exit\n"): 
-    text = serial.readline() 
-    if (text != ""):
-       print ("Android: " + text + "\n")
-    
-    send = raw_input()
-    if (send != ""):
-       serial.write("PC: " + send + " \r\n")	
