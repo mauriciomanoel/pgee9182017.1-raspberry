@@ -3,7 +3,7 @@ import serial
 port = "/dev/ttyS0"    # Raspberry Pi 3
 
 serial = serial.Serial(port, baudrate = 9600, timeout=1)
-print "starting"
+print "Starting Receive"
 text = ""
 while (text != "exit"): 
     text = serial.readline()

@@ -4,7 +4,7 @@ import time
 port = "/dev/ttyS0"    # Raspberry Pi 3
 
 serial = serial.Serial(port, baudrate = 9600, timeout=3)
-print "starting"
+print "Starting Send"
 text = ""
 while (text != "exit\n"): 
     send = raw_input()
