@@ -19,11 +19,11 @@
   <body>
 	<div class="container">
 		
-	      <div class="starter-template">
+	      <div class="starter-template" style="text-align: center;">
 		<?php if ($status == "ok"): ?>
-       		 <p class="lead" style="text-align: center;">Temperatura: <?php echo $temperatura;?> Umidade: <?php echo $umidade; ?></p>
+       		 <p class="lead">Temperatura: <?php echo $temperatura;?> Umidade: <?php echo $umidade; ?></p>
 		<?php else:  ?>
-		  <p class="lead" style="text-align: center;">Sistema indispon&iacute;vel. Por favor tente mais tarde.</p>
+		  <p class="lead">Sistema indispon&iacute;vel. Por favor tente mais tarde.</p>
 		<?php endif;?>
      	      </div>
 
