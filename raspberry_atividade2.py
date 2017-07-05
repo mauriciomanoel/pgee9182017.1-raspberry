@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-led_pin = 4	#GPIO4 - pin 7
+led_pin = 4	# GPIO4 - pin 7
 GPIO.setmode(GPIO.BCM) # Referencia aos pinos pelo número Broadcom SOC channel
 GPIO.setup(led_pin, GPIO.OUT)
 try:

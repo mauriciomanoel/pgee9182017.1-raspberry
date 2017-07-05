@@ -1,6 +1,6 @@
 import serial
 
-port = "/dev/ttyS0"    # Raspberry Pi 3
+port = "/dev/ttyS0"    # Porta habilitada no Raspberry Pi 3
 
 serial = serial.Serial(port, baudrate = 9600, timeout=1)
 print "Starting Receive"
